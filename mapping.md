@@ -1,685 +1,684 @@
 # Mapping between Darwin Core and Movebank data model
 
+For Darwin Core term definitions, see http://rs.tdwg.org/dwc/terms/index.htm
+
 ## Record level terms
 
-### term
+### [term](http://rs.tdwg.org/dwc/terms/index.htm#term)
 
 
 
-### type
+### [type](http://rs.tdwg.org/dwc/terms/index.htm#type)
 
 
 
-### modified
+### [modified](http://rs.tdwg.org/dwc/terms/index.htm#modified)
 
 
 
-### language
+### [language](http://rs.tdwg.org/dwc/terms/index.htm#language)
 
 
 
-### license
+### [license](http://rs.tdwg.org/dwc/terms/index.htm#license)
 
 
 
-### rightsHolder
+### [rightsHolder](http://rs.tdwg.org/dwc/terms/index.htm#rightsHolder)
 
 
 
-### accessRights
+### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
 
 
-### bibliographicCitation
+### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
 
 
-### references
+### [references](http://rs.tdwg.org/dwc/terms/index.htm#references)
 
 
 
-### institutionID
+### [institutionID](http://rs.tdwg.org/dwc/terms/index.htm#institutionID)
 
 
 
-### collectionID
+### [collectionID](http://rs.tdwg.org/dwc/terms/index.htm#collectionID)
 
 
 
-### datasetID
+### [datasetID](http://rs.tdwg.org/dwc/terms/index.htm#datasetID)
 
 
 
-### institutionCode
+### [institutionCode](http://rs.tdwg.org/dwc/terms/index.htm#institutionCode)
 
 
 
-### collectionCode
+### [collectionCode](http://rs.tdwg.org/dwc/terms/index.htm#collectionCode)
 
 
 
-### datasetName
+### [datasetName](http://rs.tdwg.org/dwc/terms/index.htm#datasetName)
 
 
 
-### ownerInstitutionCode
+### [ownerInstitutionCode](http://rs.tdwg.org/dwc/terms/index.htm#ownerInstitutionCode)
 
 
 
-### basisOfRecord
+### [basisOfRecord](http://rs.tdwg.org/dwc/terms/index.htm#basisOfRecord)
 
 
 
-### informationWithheld
+### [informationWithheld](http://rs.tdwg.org/dwc/terms/index.htm#informationWithheld)
 
 
 
-### dataGeneralizations
+### [dataGeneralizations](http://rs.tdwg.org/dwc/terms/index.htm#dataGeneralizations)
 
 
 
-### dynamicProperties
+### [dynamicProperties](http://rs.tdwg.org/dwc/terms/index.htm#dynamicProperties)
 
 
 
-### occurrenceID
+### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 
 
-### catalogNumber
+### [catalogNumber](http://rs.tdwg.org/dwc/terms/index.htm#catalogNumber)
 
 
 
-### recordNumber
+### [recordNumber](http://rs.tdwg.org/dwc/terms/index.htm#recordNumber)
 
 
 
-### recordedBy
+### [recordedBy](http://rs.tdwg.org/dwc/terms/index.htm#recordedBy)
 
 
 
-### individualCount
+### [individualCount](http://rs.tdwg.org/dwc/terms/index.htm#individualCount)
 
 
 
-### organismQuantity
+### [organismQuantity](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantity)
 
 
 
-### organismQuantityType
+### [organismQuantityType](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantityType)
 
 
 
-### sex
+### [sex](http://rs.tdwg.org/dwc/terms/index.htm#sex)
 
 
 
-### lifeStage
+### [lifeStage](http://rs.tdwg.org/dwc/terms/index.htm#lifeStage)
 
 
 
-### reproductiveCondition
+### [reproductiveCondition](http://rs.tdwg.org/dwc/terms/index.htm#reproductiveCondition)
 
 
 
-### behavior
+### [behavior](http://rs.tdwg.org/dwc/terms/index.htm#behavior)
 
 
 
-### establishmentMeans
+### [establishmentMeans](http://rs.tdwg.org/dwc/terms/index.htm#establishmentMeans)
 
 
 
-### occurrenceStatus
+### [occurrenceStatus](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceStatus)
 
 
 
-### preparations
+### [preparations](http://rs.tdwg.org/dwc/terms/index.htm#preparations)
 
 
 
-### disposition
+### [disposition](http://rs.tdwg.org/dwc/terms/index.htm#disposition)
 
 
 
-### associatedMedia
+### [associatedMedia](http://rs.tdwg.org/dwc/terms/index.htm#associatedMedia)
 
 
 
-### associatedReferences
+### [associatedReferences](http://rs.tdwg.org/dwc/terms/index.htm#associatedReferences)
 
 
 
-### associatedSequences
+### [associatedSequences](http://rs.tdwg.org/dwc/terms/index.htm#associatedSequences)
 
 
 
-### associatedTaxa
+### [associatedTaxa](http://rs.tdwg.org/dwc/terms/index.htm#associatedTaxa)
 
 
 
-### otherCatalogNumbers
+### [otherCatalogNumbers](http://rs.tdwg.org/dwc/terms/index.htm#otherCatalogNumbers)
 
 
 
-### occurrenceRemarks
+### [occurrenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceRemarks)
 
 
 
-### organismID
+### [organismID](http://rs.tdwg.org/dwc/terms/index.htm#organismID)
 
 
 
-### organismName
+### [organismName](http://rs.tdwg.org/dwc/terms/index.htm#organismName)
 
 
 
-### organismScope
+### [organismScope](http://rs.tdwg.org/dwc/terms/index.htm#organismScope)
 
 
 
-### associatedOccurrences
+### [associatedOccurrences](http://rs.tdwg.org/dwc/terms/index.htm#associatedOccurrences)
 
 
 
-### associatedOrganisms
+### [associatedOrganisms](http://rs.tdwg.org/dwc/terms/index.htm#associatedOrganisms)
 
 
 
-### previousIdentifications
+### [previousIdentifications](http://rs.tdwg.org/dwc/terms/index.htm#previousIdentifications)
 
 
 
-### organismRemarks
+### [organismRemarks](http://rs.tdwg.org/dwc/terms/index.htm#organismRemarks)
 
 
 
-### materialSampleID
+### [materialSampleID](http://rs.tdwg.org/dwc/terms/index.htm#materialSampleID)
 
 
 
-### eventID
+### [eventID](http://rs.tdwg.org/dwc/terms/index.htm#eventID)
 
 
 
-### parentEventID
+### [parentEventID](http://rs.tdwg.org/dwc/terms/index.htm#parentEventID)
 
 
 
-### fieldNumber
+### [fieldNumber](http://rs.tdwg.org/dwc/terms/index.htm#fieldNumber)
 
 
 
-### eventDate
+### [eventDate](http://rs.tdwg.org/dwc/terms/index.htm#eventDate)
 
 
 
-### eventTime
+### [eventTime](http://rs.tdwg.org/dwc/terms/index.htm#eventTime)
 
 
 
-### startDayOfYear
+### [startDayOfYear](http://rs.tdwg.org/dwc/terms/index.htm#startDayOfYear)
 
 
 
-### endDayOfYear
+### [endDayOfYear](http://rs.tdwg.org/dwc/terms/index.htm#endDayOfYear)
 
 
 
-### year
+### [year](http://rs.tdwg.org/dwc/terms/index.htm#year)
 
 
 
-### month
+### [month](http://rs.tdwg.org/dwc/terms/index.htm#month)
 
 
 
-### day
+### [day](http://rs.tdwg.org/dwc/terms/index.htm#day)
 
 
 
-### verbatimEventDate
+### [verbatimEventDate](http://rs.tdwg.org/dwc/terms/index.htm#verbatimEventDate)
 
 
 
-### habitat
+### [habitat](http://rs.tdwg.org/dwc/terms/index.htm#habitat)
 
 
 
-### samplingProtocol
+### [samplingProtocol](http://rs.tdwg.org/dwc/terms/index.htm#samplingProtocol)
 
 
 
-### samplingEffort
+### [samplingEffort](http://rs.tdwg.org/dwc/terms/index.htm#samplingEffort)
 
 
 
-### sampleSizeValue
+### [sampleSizeValue](http://rs.tdwg.org/dwc/terms/index.htm#sampleSizeValue)
 
 
 
-### sampleSizeUnit
+### [sampleSizeUnit](http://rs.tdwg.org/dwc/terms/index.htm#sampleSizeUnit)
 
 
 
-### fieldNotes
+### [fieldNotes](http://rs.tdwg.org/dwc/terms/index.htm#fieldNotes)
 
 
 
-### eventRemarks
+### [eventRemarks](http://rs.tdwg.org/dwc/terms/index.htm#eventRemarks)
 
 
 
-### locationID
+### [locationID](http://rs.tdwg.org/dwc/terms/index.htm#locationID)
 
 
 
-### higherGeographyID
+### [higherGeographyID](http://rs.tdwg.org/dwc/terms/index.htm#higherGeographyID)
 
 
 
-### higherGeography
+### [higherGeography](http://rs.tdwg.org/dwc/terms/index.htm#higherGeography)
 
 
 
-### continent
+### [continent](http://rs.tdwg.org/dwc/terms/index.htm#continent)
 
 
 
-### waterBody
+### [waterBody](http://rs.tdwg.org/dwc/terms/index.htm#waterBody)
 
 
 
-### islandGroup
+### [islandGroup](http://rs.tdwg.org/dwc/terms/index.htm#islandGroup)
 
 
 
-### island
+### [island](http://rs.tdwg.org/dwc/terms/index.htm#island)
 
 
 
-### country
+### [country](http://rs.tdwg.org/dwc/terms/index.htm#country)
 
 
 
-### countryCode
+### [countryCode](http://rs.tdwg.org/dwc/terms/index.htm#countryCode)
 
 
 
-### stateProvince
+### [stateProvince](http://rs.tdwg.org/dwc/terms/index.htm#stateProvince)
 
 
 
-### county
+### [county](http://rs.tdwg.org/dwc/terms/index.htm#county)
 
 
 
-### municipality
+### [municipality](http://rs.tdwg.org/dwc/terms/index.htm#municipality)
 
 
 
-### locality
+### [locality](http://rs.tdwg.org/dwc/terms/index.htm#locality)
 
 
 
-### verbatimLocality
+### [verbatimLocality](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLocality)
 
 
 
-### minimumElevationInMeters
+### [minimumElevationInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumElevationInMeters)
 
 
 
-### maximumElevationInMeters
+### [maximumElevationInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumElevationInMeters)
 
 
 
-### verbatimElevation
+### [verbatimElevation](http://rs.tdwg.org/dwc/terms/index.htm#verbatimElevation)
 
 
 
-### minimumDepthInMeters
+### [minimumDepthInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDepthInMeters)
 
 
 
-### maximumDepthInMeters
+### [maximumDepthInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumDepthInMeters)
 
 
 
-### verbatimDepth
+### [verbatimDepth](http://rs.tdwg.org/dwc/terms/index.htm#verbatimDepth)
 
 
 
-### minimumDistanceAboveSurfaceInMeters
+### [minimumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDistanceAboveSurfaceInMeters)
 
 
 
-### maximumDistanceAboveSurfaceInMeters
+### [maximumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumDistanceAboveSurfaceInMeters)
 
 
 
-### locationAccordingTo
+### [locationAccordingTo](http://rs.tdwg.org/dwc/terms/index.htm#locationAccordingTo)
 
 
 
-### locationRemarks
+### [locationRemarks](http://rs.tdwg.org/dwc/terms/index.htm#locationRemarks)
 
 
 
-### decimalLatitude
+### [decimalLatitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLatitude)
 
 
 
-### decimalLongitude
+### [decimalLongitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLongitude)
 
 
 
-### geodeticDatum
+### [geodeticDatum](http://rs.tdwg.org/dwc/terms/index.htm#geodeticDatum)
 
 
 
-### coordinateUncertaintyInMeters
+### [coordinateUncertaintyInMeters](http://rs.tdwg.org/dwc/terms/index.htm#coordinateUncertaintyInMeters)
 
 
 
-### coordinatePrecision
+### [coordinatePrecision](http://rs.tdwg.org/dwc/terms/index.htm#coordinatePrecision)
 
 
 
-### pointRadiusSpatialFit
+### [pointRadiusSpatialFit](http://rs.tdwg.org/dwc/terms/index.htm#pointRadiusSpatialFit)
 
 
 
-### verbatimCoordinates
+### [verbatimCoordinates](http://rs.tdwg.org/dwc/terms/index.htm#verbatimCoordinates)
 
 
 
-### verbatimLatitude
+### [verbatimLatitude](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLatitude)
 
 
 
-### verbatimLongitude
+### [verbatimLongitude](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLongitude)
 
 
 
-### verbatimCoordinateSystem
+### [verbatimCoordinateSystem](http://rs.tdwg.org/dwc/terms/index.htm#verbatimCoordinateSystem)
 
 
 
-### verbatimSRS
+### [verbatimSRS](http://rs.tdwg.org/dwc/terms/index.htm#verbatimSRS)
 
 
 
-### footprintWKT
+### [footprintWKT](http://rs.tdwg.org/dwc/terms/index.htm#footprintWKT)
 
 
 
-### footprintSRS
+### [footprintSRS](http://rs.tdwg.org/dwc/terms/index.htm#footprintSRS)
 
 
 
-### footprintSpatialFit
+### [footprintSpatialFit](http://rs.tdwg.org/dwc/terms/index.htm#footprintSpatialFit)
 
 
 
-### georeferencedBy
+### [georeferencedBy](http://rs.tdwg.org/dwc/terms/index.htm#georeferencedBy)
 
 
 
-### georeferencedDate
+### [georeferencedDate](http://rs.tdwg.org/dwc/terms/index.htm#georeferencedDate)
 
 
 
-### georeferenceProtocol
+### [georeferenceProtocol](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceProtocol)
 
 
 
-### georeferenceSources
+### [georeferenceSources](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceSources)
 
 
 
-### georeferenceVerificationStatus
+### [georeferenceVerificationStatus](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceVerificationStatus)
 
 
 
-### georeferenceRemarks
+### [georeferenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceRemarks)
 
 
 
-### geologicalContextID
+### [geologicalContextID](http://rs.tdwg.org/dwc/terms/index.htm#geologicalContextID)
 
 
 
-### earliestEonOrLowestEonothem
+### [earliestEonOrLowestEonothem](http://rs.tdwg.org/dwc/terms/index.htm#earliestEonOrLowestEonothem)
 
 
 
-### latestEonOrHighestEonothem
+### [latestEonOrHighestEonothem](http://rs.tdwg.org/dwc/terms/index.htm#latestEonOrHighestEonothem)
 
 
 
-### earliestEraOrLowestErathem
+### [earliestEraOrLowestErathem](http://rs.tdwg.org/dwc/terms/index.htm#earliestEraOrLowestErathem)
 
 
 
-### latestEraOrHighestErathem
+### [latestEraOrHighestErathem](http://rs.tdwg.org/dwc/terms/index.htm#latestEraOrHighestErathem)
 
 
 
-### earliestPeriodOrLowestSystem
+### [earliestPeriodOrLowestSystem](http://rs.tdwg.org/dwc/terms/index.htm#earliestPeriodOrLowestSystem)
 
 
 
-### latestPeriodOrHighestSystem
+### [latestPeriodOrHighestSystem](http://rs.tdwg.org/dwc/terms/index.htm#latestPeriodOrHighestSystem)
 
 
 
-### earliestEpochOrLowestSeries
+### [earliestEpochOrLowestSeries](http://rs.tdwg.org/dwc/terms/index.htm#earliestEpochOrLowestSeries)
 
 
 
-### latestEpochOrHighestSeries
+### [latestEpochOrHighestSeries](http://rs.tdwg.org/dwc/terms/index.htm#latestEpochOrHighestSeries)
 
 
 
-### earliestAgeOrLowestStage
+### [earliestAgeOrLowestStage](http://rs.tdwg.org/dwc/terms/index.htm#earliestAgeOrLowestStage)
 
 
 
-### latestAgeOrHighestStage
+### [latestAgeOrHighestStage](http://rs.tdwg.org/dwc/terms/index.htm#latestAgeOrHighestStage)
 
 
 
-### lowestBiostratigraphicZone
+### [lowestBiostratigraphicZone](http://rs.tdwg.org/dwc/terms/index.htm#lowestBiostratigraphicZone)
 
 
 
-### highestBiostratigraphicZone
+### [highestBiostratigraphicZone](http://rs.tdwg.org/dwc/terms/index.htm#highestBiostratigraphicZone)
 
 
 
-### lithostratigraphicTerms
+### [lithostratigraphicTerms](http://rs.tdwg.org/dwc/terms/index.htm#lithostratigraphicTerms)
 
 
 
-### group
+### [group](http://rs.tdwg.org/dwc/terms/index.htm#group)
 
 
 
-### formation
+### [formation](http://rs.tdwg.org/dwc/terms/index.htm#formation)
 
 
 
-### member
+### [member](http://rs.tdwg.org/dwc/terms/index.htm#member)
 
 
 
-### bed
+### [bed](http://rs.tdwg.org/dwc/terms/index.htm#bed)
 
 
 
-### identificationID
+### [identificationID](http://rs.tdwg.org/dwc/terms/index.htm#identificationID)
 
 
 
-### identificationQualifier
+### [identificationQualifier](http://rs.tdwg.org/dwc/terms/index.htm#identificationQualifier)
 
 
 
-### typeStatus
+### [typeStatus](http://rs.tdwg.org/dwc/terms/index.htm#typeStatus)
 
 
 
-### identifiedBy
+### [identifiedBy](http://rs.tdwg.org/dwc/terms/index.htm#identifiedBy)
 
 
 
-### dateIdentified
+### [dateIdentified](http://rs.tdwg.org/dwc/terms/index.htm#dateIdentified)
 
 
 
-### identificationReferences
+### [identificationReferences](http://rs.tdwg.org/dwc/terms/index.htm#identificationReferences)
 
 
 
-### identificationVerificationStatus
+### [identificationVerificationStatus](http://rs.tdwg.org/dwc/terms/index.htm#identificationVerificationStatus)
 
 
 
-### identificationRemarks
+### [identificationRemarks](http://rs.tdwg.org/dwc/terms/index.htm#identificationRemarks)
 
 
 
-### taxonID
+### [taxonID](http://rs.tdwg.org/dwc/terms/index.htm#taxonID)
 
 
 
-### scientificNameID
+### [scientificNameID](http://rs.tdwg.org/dwc/terms/index.htm#scientificNameID)
 
 
 
-### acceptedNameUsageID
+### [acceptedNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#acceptedNameUsageID)
 
 
 
-### parentNameUsageID
+### [parentNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#parentNameUsageID)
 
 
 
-### originalNameUsageID
+### [originalNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#originalNameUsageID)
 
 
 
-### nameAccordingToID
+### [nameAccordingToID](http://rs.tdwg.org/dwc/terms/index.htm#nameAccordingToID)
 
 
 
-### namePublishedInID
+### [namePublishedInID](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedInID)
 
 
 
-### taxonConceptID
+### [taxonConceptID](http://rs.tdwg.org/dwc/terms/index.htm#taxonConceptID)
 
 
 
-### scientificName
+### [scientificName](http://rs.tdwg.org/dwc/terms/index.htm#scientificName)
 
 
 
-### acceptedNameUsage
+### [acceptedNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#acceptedNameUsage)
 
 
 
-### parentNameUsage
+### [parentNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#parentNameUsage)
 
 
 
-### originalNameUsage
+### [originalNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#originalNameUsage)
 
 
 
-### nameAccordingTo
+### [nameAccordingTo](http://rs.tdwg.org/dwc/terms/index.htm#nameAccordingTo)
 
 
 
-### namePublishedIn
+### [namePublishedIn](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedIn)
 
 
 
-### namePublishedInYear
+### [namePublishedInYear](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedInYear)
 
 
 
-### higherClassification
+### [higherClassification](http://rs.tdwg.org/dwc/terms/index.htm#higherClassification)
 
 
 
-### kingdom
+### [kingdom](http://rs.tdwg.org/dwc/terms/index.htm#kingdom)
 
 
 
-### phylum
+### [phylum](http://rs.tdwg.org/dwc/terms/index.htm#phylum)
 
 
 
-### class
+### [class](http://rs.tdwg.org/dwc/terms/index.htm#class)
 
 
 
-### order
+### [order](http://rs.tdwg.org/dwc/terms/index.htm#order)
 
 
 
-### family
+### [family](http://rs.tdwg.org/dwc/terms/index.htm#family)
 
 
 
-### genus
+### [genus](http://rs.tdwg.org/dwc/terms/index.htm#genus)
 
 
 
-### subgenus
+### [subgenus](http://rs.tdwg.org/dwc/terms/index.htm#subgenus)
 
 
 
-### specificEpithet
+### [specificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#specificEpithet)
 
 
 
-### infraspecificEpithet
+### [infraspecificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#infraspecificEpithet)
 
 
 
-### taxonRank
+### [taxonRank](http://rs.tdwg.org/dwc/terms/index.htm#taxonRank)
 
 
 
-### verbatimTaxonRank
+### [verbatimTaxonRank](http://rs.tdwg.org/dwc/terms/index.htm#verbatimTaxonRank)
 
 
 
-### scientificNameAuthorship
+### [scientificNameAuthorship](http://rs.tdwg.org/dwc/terms/index.htm#scientificNameAuthorship)
 
 
 
-### vernacularName
+### [vernacularName](http://rs.tdwg.org/dwc/terms/index.htm#vernacularName)
 
 
 
-### nomenclaturalCode
+### [nomenclaturalCode](http://rs.tdwg.org/dwc/terms/index.htm#nomenclaturalCode)
 
 
 
-### taxonomicStatus
+### [taxonomicStatus](http://rs.tdwg.org/dwc/terms/index.htm#taxonomicStatus)
 
 
 
-### nomenclaturalStatus
+### [nomenclaturalStatus](http://rs.tdwg.org/dwc/terms/index.htm#nomenclaturalStatus)
 
 
 
-### taxonRemarks
-
-
-
+### [taxonRemarks](http://rs.tdwg.org/dwc/terms/index.htm#taxonRemarks)
 
