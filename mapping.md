@@ -15,6 +15,7 @@ Each record is an event, so use the **static value**:
 #### [modified](http://rs.tdwg.org/dwc/terms/index.htm#modified)
 
 Possibly...
+SCD: Here would we use the publication date for the dataset?
 
 #### [language](http://rs.tdwg.org/dwc/terms/index.htm#language)
 
@@ -31,14 +32,20 @@ All data in the Movebank Data Repository are published under CC0. That informati
 #### [rightsHolder](http://rs.tdwg.org/dwc/terms/index.htm#rightsHolder)
 
 Recommended...
+SCD: Options I see here could be to use (1) the publisher (static: "University of Konstanz") or (2) the first author, as found as the first creatorName in the in the DataCite metadata, or else (3) skip this one. The "A person or organization owning or managing rights over the resource", if we read it to be the current "owner" of the original data, to the degree relevant for data published in the public domain, is not explicitly recorded anywhere in the dataset. In some cases the first author would cease to be the "owner" if, say, they left the organization through which the data were collected.
 
 #### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
-Possibly...
+SCD: Is this value too long? It is the "Terms of Use" included in the readme file of every published data file. **static value**:
+
+    This data file is licensed by the Creative Commons Zero (CC0 1.0) license. The intent of this license is to facilitate the re-use of works. The Creative Commons Zero license is a "no rights reserved" license that allows copyright holders to opt out of copyright protections automatically extended by copyright and other laws, thus placing works in the public domain with as little legal restriction as possible. However, works published with this license must still be appropriately cited following professional and ethical standards for academic citation. We highly recommend that you contact the data creator if possible if you will be re-using or re-analyzing data in this file. Researchers will likely be interested in learning about new uses of their data, might also have important insights about how to properly analyze and interpret their data, and/or might have additional data they would be willing to contribute to your project. Feel free to contact us at support@movebank.org if you need assistance contacting data owners.
 
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
-Possibly...
+Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the metadata using the general format <creator/creatorName> (<publicationYear>) Data from: <title/titles>. Movebank Data Repository. doi:<identifier>
+It should be possible to find script to do this somewhere in our or Dryad's implementation of DataCite.
+
+    Bastille-Rousseau G, Potts JR, Yackulic CB, Frair JL, Ellington EH, Blake S (2016) Data from: Flexible characterization of animal movement pattern using net squared displacement and a latent state model. Movebank Data Repository. doi:10.5441/001/1.356nb5mf
 
 #### [references](http://rs.tdwg.org/dwc/terms/index.htm#references)
 #### [institutionID](http://rs.tdwg.org/dwc/terms/index.htm#institutionID)
