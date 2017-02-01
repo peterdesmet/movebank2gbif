@@ -42,14 +42,14 @@ SCD: Is this value too long? It is the "Terms of Use" included in the readme fil
 
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
-Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format creator/creatorName" ("publicationYear") Data from: "title/titles". Movebank Data Repository. doi:"identifier
+Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format `metadata.creator/creatorName` (`metadata.publicationYear`) Data from: `metadata.title/titles` [but ignore/remove "Data from: "]. Movebank Data Repository. doi:`metadata.identifier`
 It should be possible to find script to do this somewhere in our or Dryad's implementation of DataCite.
 
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Data from: Why do kestrels soar? Movebank Data Repository. doi:10.5441/001/1.sj8t3r11
     
 #### [references](http://rs.tdwg.org/dwc/terms/index.htm#references)
 
-SCD: We could (1) take the value from "description descriptionType="Other"" in the DataCite metadata (this is always the full citation for the primary paper associated with the dataset) or (2) take the value/s from "relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo"" (these are the DOIs only for papers associated with the dataset—always 1 that corresponds with the full citation in (1) and can also include DOIs for additional papers that use the dataset. (1) is probably the best option.
+SCD: We could (1) take the value from `metadata.description descriptionType="Other"` in the DataCite metadata (this is always the full citation for the primary paper associated with the dataset) or (2) take the value/s from `metadata.relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo"` (these are the DOIs only for papers associated with the dataset—always 1 that corresponds with the full citation in (1) and can also include DOIs for additional papers that use the dataset. (1) is probably the best option.
     
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Why do kestrels soar? PLOS ONE. 10(12): e0145402. doi:10.1371/journal.pone.0145402
 
@@ -68,6 +68,7 @@ Resolvable DOI of the dataset, will be the same for all records in a dataset. Ca
 #### [institutionCode](http://rs.tdwg.org/dwc/terms/index.htm#institutionCode)
 
 Recommended...
+SCD: Suggest we skip for now.
 
 #### [collectionCode](http://rs.tdwg.org/dwc/terms/index.htm#collectionCode)
 
