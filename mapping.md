@@ -36,19 +36,25 @@ SCD: Options I see here could be to use (1) the publisher (static: "University o
 
 #### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
-SCD: Is this value too long? It is the "Terms of Use" included in the readme file of every published data file. **static value**:
+SCD: Is this value too long? It is the "Terms of Use" included in the readme file of every published data file. I could shorten this to 1 phrase instead. **static value**:
 
     This data file is licensed by the Creative Commons Zero (CC0 1.0) license. The intent of this license is to facilitate the re-use of works. The Creative Commons Zero license is a "no rights reserved" license that allows copyright holders to opt out of copyright protections automatically extended by copyright and other laws, thus placing works in the public domain with as little legal restriction as possible. However, works published with this license must still be appropriately cited following professional and ethical standards for academic citation. We highly recommend that you contact the data creator if possible if you will be re-using or re-analyzing data in this file. Researchers will likely be interested in learning about new uses of their data, might also have important insights about how to properly analyze and interpret their data, and/or might have additional data they would be willing to contribute to your project. Feel free to contact us at support@movebank.org if you need assistance contacting data owners.
 
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
-Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the metadata using the general format <creator/creatorName> (<publicationYear>) Data from: <title/titles>. Movebank Data Repository. doi:<identifier>
+Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format creator/creatorName" ("publicationYear") Data from: "title/titles". Movebank Data Repository. doi:"identifier
 It should be possible to find script to do this somewhere in our or Dryad's implementation of DataCite.
 
-    Bastille-Rousseau G, Potts JR, Yackulic CB, Frair JL, Ellington EH, Blake S (2016) Data from: Flexible characterization of animal movement pattern using net squared displacement and a latent state model. Movebank Data Repository. doi:10.5441/001/1.356nb5mf
-
+    Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Data from: Why do kestrels soar? Movebank Data Repository. doi:10.5441/001/1.sj8t3r11
+    
 #### [references](http://rs.tdwg.org/dwc/terms/index.htm#references)
+
+SCD: We could (1) take the value from "description descriptionType="Other"" in the DataCite metadata (this is always the full citation for the primary paper associated with the dataset) or (2) take the value/s from "relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo"" (these are the DOIs only for papers associated with the dataset—always 1 that corresponds with the full citation in (1) and can also include DOIs for additional papers that use the dataset. (1) is probably the best option.
+    
+    Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Why do kestrels soar? PLOS ONE. 10(12): e0145402. doi:10.1371/journal.pone.0145402
+
 #### [institutionID](http://rs.tdwg.org/dwc/terms/index.htm#institutionID)
+SCD: Suggest we skip.
 #### [collectionID](http://rs.tdwg.org/dwc/terms/index.htm#collectionID)
 
 n/a
@@ -57,7 +63,7 @@ n/a
 
 Resolvable DOI of the dataset, will be the same for all records in a dataset. Can be created by concatening `"http://doi.org/"` with `metadata.doi`:
 
-    http://doi.org/10.5441/001/1.TC76G560
+    http://doi.org/10.5441/001/1.sj8t3r11
 
 #### [institutionCode](http://rs.tdwg.org/dwc/terms/index.htm#institutionCode)
 
