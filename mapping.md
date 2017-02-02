@@ -32,7 +32,7 @@ All data in the Movebank Data Repository are published under CC0. That informati
 #### [rightsHolder](http://rs.tdwg.org/dwc/terms/index.htm#rightsHolder)
 
 Recommended...
-SCD: Options I see here could be to use (1) the publisher (static: "University of Konstanz") or (2) the first author, as found as the first creatorName in the in the DataCite metadata, or else (3) skip this one. The "A person or organization owning or managing rights over the resource", if we read it to be the current "owner" of the original data, to the degree relevant for data published in the public domain, is not explicitly recorded anywhere in the dataset. In some cases the first author would cease to be the "owner" if, say, they left the organization through which the data were collected.
+SCD: Options I see here could be to use (1) the publisher (static: `University of Konstanz`) or (2) the first author, as found as the first creatorName in the in the DataCite metadata, or else (3) skip this one. The "A person or organization owning or managing rights over the resource", if we read it to be the current "owner" of the original data, to the degree relevant for data published in the public domain, is not explicitly recorded anywhere in the dataset. In some cases the first author would cease to be the "owner" if, say, they left the organization through which the data were collected.
 
 #### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
@@ -58,7 +58,6 @@ SCD: We could (1) take the value from `metadata.description descriptionType="Oth
 SCD: Suggest we skip. See notes about [rightsHolder].
 
 #### [collectionID](http://rs.tdwg.org/dwc/terms/index.htm#collectionID)
-
 n/a
 
 #### [datasetID](http://rs.tdwg.org/dwc/terms/index.htm#datasetID)
@@ -73,7 +72,6 @@ Recommended...
 SCD: Suggest we skip for now. See notes about [rightsHolder]. This term has the same definition as the same as ownerInstitutionCode?
 
 #### [collectionCode](http://rs.tdwg.org/dwc/terms/index.htm#collectionCode)
-
 n/a
 
 #### [datasetName](http://rs.tdwg.org/dwc/terms/index.htm#datasetName)
@@ -99,8 +97,7 @@ SCD: Note there are 1-2 exceptions, in which the locations were noted by a human
 Possibly...
 
 #### [dataGeneralizations](http://rs.tdwg.org/dwc/terms/index.htm#dataGeneralizations)
-
-SCD: Can skip
+n/a
 
 #### [dynamicProperties](http://rs.tdwg.org/dwc/terms/index.htm#dynamicProperties)
 
@@ -112,7 +109,7 @@ SCD: ?? Might use this to concatenate values from miscellaneous data and referen
 #### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 Recommended...
-SCD: The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
 
     275195086
 
@@ -122,12 +119,10 @@ n/a
 SCD: Could use this instead of occurrenceID as described above.
 
 #### [recordNumber](http://rs.tdwg.org/dwc/terms/index.htm#recordNumber)
-
-SCD: Skip
+n/a
 
 #### [recordedBy](http://rs.tdwg.org/dwc/terms/index.htm#recordedBy)
-
-SCD: Skip
+n/a
 
 #### [individualCount](http://rs.tdwg.org/dwc/terms/index.htm#individualCount)
 
@@ -136,30 +131,28 @@ Records always represent 1 animal so use the **static value**
     1
     
 #### [organismQuantity](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantity)
-
-SCD: Skip
+n/a
 
 #### [organismQuantityType](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantityType)
-
-SCD: Skip
+n/a
 
 #### [sex](http://rs.tdwg.org/dwc/terms/index.htm#sex)
 
 Recommended...
-SCD: Stored in the reference data file as `animal-sex`, linked to records in the data file by the same `animal-id`. Always m, f, or blank.
+Stored in the reference data file as `animal-sex`, linked to records in the data file by matching the reference data `animal-id` with the data file `individual-local-identifier`. Always m, f, or blank.
 
     f
     
 #### [lifeStage](http://rs.tdwg.org/dwc/terms/index.htm#lifeStage)
 
 Recommended...
-SCD: Stored in the reference data file as `animal-life-stage`, linked to records in the data file by the same `animal-id` + `tag-id`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
+Stored in the reference data file as `animal-life-stage`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
 
     adult (> 1 year)
 
 #### [reproductiveCondition](http://rs.tdwg.org/dwc/terms/index.htm#reproductiveCondition)
 
-SCD: Stored in the reference data file as `animal-reproductive-condition`, linked to records in the data file by the same `animal-id` + `tag-id`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
+Stored in the reference data file as `animal-reproductive-condition`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
 
     breeding
 
@@ -168,64 +161,104 @@ SCD: Stored in the reference data file as `animal-reproductive-condition`, linke
 SCD: Behavior information can be stored in several non-required data file attributes, but few datasets include them, including the example. Attributes that could be stored here include `behavioural-classfication`, `migration-stage`, `migration-stage-standard`, possible others very rarely used.
 
 #### [establishmentMeans](http://rs.tdwg.org/dwc/terms/index.htm#establishmentMeans)
+n/a
+
 #### [occurrenceStatus](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceStatus)
+
+We don't record absent values so use the **static value**
+    
+    present
+    
 #### [preparations](http://rs.tdwg.org/dwc/terms/index.htm#preparations)
-
 n/a
-
 #### [disposition](http://rs.tdwg.org/dwc/terms/index.htm#disposition)
-
+n/a
+#### [associatedMedia](http://rs.tdwg.org/dwc/terms/index.htm#associatedMedia)
 n/a
 
-#### [associatedMedia](http://rs.tdwg.org/dwc/terms/index.htm#associatedMedia)
 #### [associatedReferences](http://rs.tdwg.org/dwc/terms/index.htm#associatedReferences)
-#### [associatedSequences](http://rs.tdwg.org/dwc/terms/index.htm#associatedSequences)
-#### [associatedTaxa](http://rs.tdwg.org/dwc/terms/index.htm#associatedTaxa)
-#### [otherCatalogNumbers](http://rs.tdwg.org/dwc/terms/index.htm#otherCatalogNumbers)
 
+SCD: Is this covered by [references]?
+
+#### [associatedSequences](http://rs.tdwg.org/dwc/terms/index.htm#associatedSequences)
+n/a
+
+#### [associatedTaxa](http://rs.tdwg.org/dwc/terms/index.htm#associatedTaxa)
+
+Stored in the data file as `individual-taxon-canonical-name`.
+
+    Falco naumanni
+    
+#### [otherCatalogNumbers](http://rs.tdwg.org/dwc/terms/index.htm#otherCatalogNumbers)
 n/a
 
 #### [occurrenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceRemarks)
+
+Stored in the data file as `comments`. Not included in most datasets including the example.
 
 ### Organism
 
 #### [organismID](http://rs.tdwg.org/dwc/terms/index.htm#organismID)
 
 Recommended...
+n/a
 
 #### [organismName](http://rs.tdwg.org/dwc/terms/index.htm#organismName)
 
 Recommended...
+Stored in the data file as `individual-local-identifier`.
+
+    B[5.H]
 
 #### [organismScope](http://rs.tdwg.org/dwc/terms/index.htm#organismScope)
-
 n/a
-
 #### [associatedOccurrences](http://rs.tdwg.org/dwc/terms/index.htm#associatedOccurrences)
+n/a
 #### [associatedOrganisms](http://rs.tdwg.org/dwc/terms/index.htm#associatedOrganisms)
+n/a
 #### [previousIdentifications](http://rs.tdwg.org/dwc/terms/index.htm#previousIdentifications)
+n/a
 #### [organismRemarks](http://rs.tdwg.org/dwc/terms/index.htm#organismRemarks)
 
-### MaterialSample
+Stored in the reference data file as `animal-comments`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Not included in the example dataset.
 
+### MaterialSample
 n/a
 
 ### Event
 
 #### [eventID](http://rs.tdwg.org/dwc/terms/index.htm#eventID)
+
+The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+
+    275195086
+    
 #### [parentEventID](http://rs.tdwg.org/dwc/terms/index.htm#parentEventID)
 #### [fieldNumber](http://rs.tdwg.org/dwc/terms/index.htm#fieldNumber)
+n/a
 #### [eventDate](http://rs.tdwg.org/dwc/terms/index.htm#eventDate)
 
 Recommended...
+SCD: Stored in the data file as `timestamp`, always in UTC. Do we need to convert these values to make the time zone unambiguous or use a standard encoding scheme?
+    
+    2012-06-06 14:20:07.000
 
 #### [eventTime](http://rs.tdwg.org/dwc/terms/index.htm#eventTime)
+n/a
 #### [startDayOfYear](http://rs.tdwg.org/dwc/terms/index.htm#startDayOfYear)
+n/a
 #### [endDayOfYear](http://rs.tdwg.org/dwc/terms/index.htm#endDayOfYear)
+n/a
 #### [year](http://rs.tdwg.org/dwc/terms/index.htm#year)
+n/a
 #### [month](http://rs.tdwg.org/dwc/terms/index.htm#month)
+n/a
 #### [day](http://rs.tdwg.org/dwc/terms/index.htm#day)
+n/a
 #### [verbatimEventDate](http://rs.tdwg.org/dwc/terms/index.htm#verbatimEventDate)
+
+SCD: Could use this instead of eventDate to avoid needing to convert?
+
 #### [habitat](http://rs.tdwg.org/dwc/terms/index.htm#habitat)
 #### [samplingProtocol](http://rs.tdwg.org/dwc/terms/index.htm#samplingProtocol)
 
