@@ -54,7 +54,9 @@ SCD: We could (1) take the value from `metadata.description descriptionType="Oth
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Why do kestrels soar? PLOS ONE. 10(12): e0145402. doi:10.1371/journal.pone.0145402
 
 #### [institutionID](http://rs.tdwg.org/dwc/terms/index.htm#institutionID)
-SCD: Suggest we skip.
+
+SCD: Suggest we skip. See notes about [rightsHolder].
+
 #### [collectionID](http://rs.tdwg.org/dwc/terms/index.htm#collectionID)
 
 n/a
@@ -68,7 +70,7 @@ Resolvable DOI of the dataset, will be the same for all records in a dataset. Ca
 #### [institutionCode](http://rs.tdwg.org/dwc/terms/index.htm#institutionCode)
 
 Recommended...
-SCD: Suggest we skip for now.
+SCD: Suggest we skip for now. See notes about [rightsHolder]. This term has the same definition as the same as ownerInstitutionCode?
 
 #### [collectionCode](http://rs.tdwg.org/dwc/terms/index.htm#collectionCode)
 
@@ -83,10 +85,12 @@ Title of the dataset, will be the same for all records in a dataset. Can be retr
 #### [ownerInstitutionCode](http://rs.tdwg.org/dwc/terms/index.htm#ownerInstitutionCode)
 
 Recommended...
+SCD: Suggest we skip for now. See notes about [rightsHolder]. This term has the same definition as the same as InstitutionCode?
 
 #### [basisOfRecord](http://rs.tdwg.org/dwc/terms/index.htm#basisOfRecord)
 
 Each record is recorded by a tracker, so use the **static value**:
+SCD: Note there are 1-2 exceptions, in which the locations were noted by a human observer. In these cases the `sensor-type` in the data file will be `natural-mark` and we could use HumanObservation.
 
     MachineObservation
 
@@ -95,35 +99,74 @@ Each record is recorded by a tracker, so use the **static value**:
 Possibly...
 
 #### [dataGeneralizations](http://rs.tdwg.org/dwc/terms/index.htm#dataGeneralizations)
+
+SCD: Can skip
+
 #### [dynamicProperties](http://rs.tdwg.org/dwc/terms/index.htm#dynamicProperties)
 
 Possibly...
+SCD: ?? Might use this to concatenate values from miscellaneous data and reference data attributes from the files?
 
 ### Occurrence
 
 #### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 Recommended...
+SCD: The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+
+    275195086
 
 #### [catalogNumber](http://rs.tdwg.org/dwc/terms/index.htm#catalogNumber)
 
 n/a
+SCD: Could use this instead of occurrenceID as described above.
 
 #### [recordNumber](http://rs.tdwg.org/dwc/terms/index.htm#recordNumber)
+
+SCD: Skip
+
 #### [recordedBy](http://rs.tdwg.org/dwc/terms/index.htm#recordedBy)
+
+SCD: Skip
+
 #### [individualCount](http://rs.tdwg.org/dwc/terms/index.htm#individualCount)
+
+Records always represent 1 animal so use the **static value**
+
+    1
+    
 #### [organismQuantity](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantity)
+
+SCD: Skip
+
 #### [organismQuantityType](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantityType)
+
+SCD: Skip
+
 #### [sex](http://rs.tdwg.org/dwc/terms/index.htm#sex)
 
 Recommended...
+SCD: Stored in the reference data file as `animal-sex`, linked to records in the data file by the same `animal-id`. Always m, f, or blank.
 
+    f
+    
 #### [lifeStage](http://rs.tdwg.org/dwc/terms/index.htm#lifeStage)
 
 Recommended...
+SCD: Stored in the reference data file as `animal-life-stage`, linked to records in the data file by the same `animal-id` + `tag-id`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
+
+    adult (> 1 year)
 
 #### [reproductiveCondition](http://rs.tdwg.org/dwc/terms/index.htm#reproductiveCondition)
+
+SCD: Stored in the reference data file as `animal-reproductive-condition`, linked to records in the data file by the same `animal-id` + `tag-id`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
+
+    breeding
+
 #### [behavior](http://rs.tdwg.org/dwc/terms/index.htm#behavior)
+
+SCD: Behavior information can be stored in several non-required data file attributes, but few datasets include them, including the example. Attributes that could be stored here include `behavioural-classfication`, `migration-stage`, `migration-stage-standard`, possible others very rarely used.
+
 #### [establishmentMeans](http://rs.tdwg.org/dwc/terms/index.htm#establishmentMeans)
 #### [occurrenceStatus](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceStatus)
 #### [preparations](http://rs.tdwg.org/dwc/terms/index.htm#preparations)
