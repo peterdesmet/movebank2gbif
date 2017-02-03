@@ -185,7 +185,7 @@ n/a
 
 #### [associatedTaxa](http://rs.tdwg.org/dwc/terms/index.htm#associatedTaxa)
 
-Stored in the data file as `individual-taxon-canonical-name` (this variable is always included).
+SCD: Stored in the data file as `individual-taxon-canonical-name` (this variable is always included). Store as [scientificName] instead?
 
     Falco naumanni
     
@@ -265,7 +265,7 @@ Stored in the data file as `habitat` (optional, rarely used). Not used in the ex
 #### [samplingProtocol](http://rs.tdwg.org/dwc/terms/index.htm#samplingProtocol)
 
 Recommended...
-SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included).
+SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Also see locationAccordingTo.
 
     gps
 
@@ -284,79 +284,133 @@ SCD: Better here than occurrenceRemarks? Stored in the data file as `comments` (
 ### Location
 
 #### [locationID](http://rs.tdwg.org/dwc/terms/index.htm#locationID)
+n/a
 #### [higherGeographyID](http://rs.tdwg.org/dwc/terms/index.htm#higherGeographyID)
+n/a
 #### [higherGeography](http://rs.tdwg.org/dwc/terms/index.htm#higherGeography)
+n/a
 #### [continent](http://rs.tdwg.org/dwc/terms/index.htm#continent)
+n/a
 #### [waterBody](http://rs.tdwg.org/dwc/terms/index.htm#waterBody)
+n/a
 #### [islandGroup](http://rs.tdwg.org/dwc/terms/index.htm#islandGroup)
+n/a
 #### [island](http://rs.tdwg.org/dwc/terms/index.htm#island)
+n/a
 #### [country](http://rs.tdwg.org/dwc/terms/index.htm#country)
+n/a
 #### [countryCode](http://rs.tdwg.org/dwc/terms/index.htm#countryCode)
+n/a
 #### [stateProvince](http://rs.tdwg.org/dwc/terms/index.htm#stateProvince)
+n/a
 #### [county](http://rs.tdwg.org/dwc/terms/index.htm#county)
+n/a
 #### [municipality](http://rs.tdwg.org/dwc/terms/index.htm#municipality)
+n/a
 #### [locality](http://rs.tdwg.org/dwc/terms/index.htm#locality)
+n/a
 #### [verbatimLocality](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLocality)
+n/a
 #### [minimumElevationInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumElevationInMeters)
-
 Recommended...
-
+n/a
 #### [maximumElevationInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumElevationInMeters)
+n/a
 #### [verbatimElevation](http://rs.tdwg.org/dwc/terms/index.htm#verbatimElevation)
+
+Stored in the data file as `height-above-ellipsoid` or `height-above-msl` (optional, sometimes used, both in m). Not used in the example dataset.
+
 #### [minimumDepthInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDepthInMeters)
+n/a
 #### [maximumDepthInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumDepthInMeters)
+n/a
 #### [verbatimDepth](http://rs.tdwg.org/dwc/terms/index.htm#verbatimDepth)
+n/a
 #### [minimumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDistanceAboveSurfaceInMeters)
 
 Recommended...
+n/a
 
 #### [maximumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumDistanceAboveSurfaceInMeters)
+n/a
 #### [locationAccordingTo](http://rs.tdwg.org/dwc/terms/index.htm#locationAccordingTo)
+
+SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Also see samplingProtocol.
+
+    gps
+    
 #### [locationRemarks](http://rs.tdwg.org/dwc/terms/index.htm#locationRemarks)
+n/a
 #### [decimalLatitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLatitude)
 
 Recommended...
+Stored in the data file as `location-lat` (technically optional, always used except for a few datasets in which only raw light level values measured by geolocators are archived).
+
+    37.391942
 
 #### [decimalLongitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLongitude)
 
 Recommended...
+Stored in the data file as `location-long` (technically optional, always used except for a few datasets in which only raw light level values measured by geolocators are archived).
 
+    -6.557898
+    
 #### [geodeticDatum](http://rs.tdwg.org/dwc/terms/index.htm#geodeticDatum)
 
 Recommended...
+All locations stored in WGS84 coordinate system, so use the **static value**:
+
+    WGS84
 
 #### [coordinateUncertaintyInMeters](http://rs.tdwg.org/dwc/terms/index.htm#coordinateUncertaintyInMeters)
 
 Recommended...
+Stored in the data file as `location-error-numerical` (optional, rarely used, in m). Not used in the example dataset.
 
 #### [coordinatePrecision](http://rs.tdwg.org/dwc/terms/index.htm#coordinatePrecision)
+n/a
 #### [pointRadiusSpatialFit](http://rs.tdwg.org/dwc/terms/index.htm#pointRadiusSpatialFit)
+n/a
 #### [verbatimCoordinates](http://rs.tdwg.org/dwc/terms/index.htm#verbatimCoordinates)
+n/a
 #### [verbatimLatitude](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLatitude)
+n/a
 #### [verbatimLongitude](http://rs.tdwg.org/dwc/terms/index.htm#verbatimLongitude)
+n/a
 #### [verbatimCoordinateSystem](http://rs.tdwg.org/dwc/terms/index.htm#verbatimCoordinateSystem)
+n/a
 #### [verbatimSRS](http://rs.tdwg.org/dwc/terms/index.htm#verbatimSRS)
+n/a
 #### [footprintWKT](http://rs.tdwg.org/dwc/terms/index.htm#footprintWKT)
+n/a
 #### [footprintSRS](http://rs.tdwg.org/dwc/terms/index.htm#footprintSRS)
+n/a
 #### [footprintSpatialFit](http://rs.tdwg.org/dwc/terms/index.htm#footprintSpatialFit)
+n/a
 #### [georeferencedBy](http://rs.tdwg.org/dwc/terms/index.htm#georeferencedBy)
+n/a
 #### [georeferencedDate](http://rs.tdwg.org/dwc/terms/index.htm#georeferencedDate)
 
 Possibly...
+SCD: See [eventDate]. Is that the right place for the timestamp associated with the location? Should the values be duplicated here?
 
 #### [georeferenceProtocol](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceProtocol)
 
 Possibly...
+n/a
 
 #### [georeferenceSources](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceSources)
 
 Possibly...
+n/a
 
 #### [georeferenceVerificationStatus](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceVerificationStatus)
 
 Possibly...
+n/a
 
 #### [georeferenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceRemarks)
+n/a
 
 ### GeologicalContext
 
@@ -365,71 +419,114 @@ n/a
 ### Taxon
 
 #### [taxonID](http://rs.tdwg.org/dwc/terms/index.htm#taxonID)
+n/a
 #### [scientificNameID](http://rs.tdwg.org/dwc/terms/index.htm#scientificNameID)
+n/a
 #### [acceptedNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#acceptedNameUsageID)
+n/a
 #### [parentNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#parentNameUsageID)
+n/a
 #### [originalNameUsageID](http://rs.tdwg.org/dwc/terms/index.htm#originalNameUsageID)
+n/a
 #### [nameAccordingToID](http://rs.tdwg.org/dwc/terms/index.htm#nameAccordingToID)
+n/a
 #### [namePublishedInID](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedInID)
+n/a
 #### [taxonConceptID](http://rs.tdwg.org/dwc/terms/index.htm#taxonConceptID)
+n/a
 #### [scientificName](http://rs.tdwg.org/dwc/terms/index.htm#scientificName)
 
 Recommended...
+SCD: Stored in the data file as `individual-taxon-canonical-name` (this variable is always included). Store here instead of in [associatedTaxa]?
+
+    Falco naumanni
 
 #### [acceptedNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#acceptedNameUsage)
+n/a
 #### [parentNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#parentNameUsage)
+n/a
 #### [originalNameUsage](http://rs.tdwg.org/dwc/terms/index.htm#originalNameUsage)
+n/a
 #### [nameAccordingTo](http://rs.tdwg.org/dwc/terms/index.htm#nameAccordingTo)
+n/a
 #### [namePublishedIn](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedIn)
+n/a
 #### [namePublishedInYear](http://rs.tdwg.org/dwc/terms/index.htm#namePublishedInYear)
+n/a
 #### [higherClassification](http://rs.tdwg.org/dwc/terms/index.htm#higherClassification)
+n/a
 #### [kingdom](http://rs.tdwg.org/dwc/terms/index.htm#kingdom)
 
 Recommended...
+We should be safe to use the **static value**:
+
+    Animalia
 
 #### [phylum](http://rs.tdwg.org/dwc/terms/index.htm#phylum)
 
 Possibly...
+SCD: Unless you know a fancy way to pull in the ITIS taxonomy by API we should skip these others. We have a published study of genus Bombus (Phylum Arthropoda) so can't statically enter anything more than Animalia.
 
 #### [class](http://rs.tdwg.org/dwc/terms/index.htm#class)
 
 Possibly...
+n/a
 
 #### [order](http://rs.tdwg.org/dwc/terms/index.htm#order)
 
 Possibly...
+n/a
 
 #### [family](http://rs.tdwg.org/dwc/terms/index.htm#family)
 
 Possibly...
+n/a
 
 #### [genus](http://rs.tdwg.org/dwc/terms/index.htm#genus)
 
 Possibly...
+n/a
 
 #### [subgenus](http://rs.tdwg.org/dwc/terms/index.htm#subgenus)
 
 Possibly...
+n/a
 
 #### [specificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#specificEpithet)
+n/a
 #### [infraspecificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#infraspecificEpithet)
+n/a
 #### [taxonRank](http://rs.tdwg.org/dwc/terms/index.htm#taxonRank)
 
 Possibly...
+n/a
 
 #### [verbatimTaxonRank](http://rs.tdwg.org/dwc/terms/index.htm#verbatimTaxonRank)
+n/a
+
 #### [scientificNameAuthorship](http://rs.tdwg.org/dwc/terms/index.htm#scientificNameAuthorship)
 
 Possibly...
+n/a
 
 #### [vernacularName](http://rs.tdwg.org/dwc/terms/index.htm#vernacularName)
 
 Possibly...
+n/a
 
 #### [nomenclaturalCode](http://rs.tdwg.org/dwc/terms/index.htm#nomenclaturalCode)
 
 Possibly...
+All taxonomic names are valid names as defined by the Integrated Taxonomic Information System (ITIS, www.itis.gov) as of the time of publication, so use the **static value**:
+
+    ITIS
 
 #### [taxonomicStatus](http://rs.tdwg.org/dwc/terms/index.htm#taxonomicStatus)
+n/a
 #### [nomenclaturalStatus](http://rs.tdwg.org/dwc/terms/index.htm#nomenclaturalStatus)
+n/a
 #### [taxonRemarks](http://rs.tdwg.org/dwc/terms/index.htm#taxonRemarks)
+SCD: We allow owners to store taxonomic information not valid in ITIS in the reference data file as `animal-taxon-detail` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Could concatonate `taxonomic detail not valid in ITIS: ` + value in `animal-taxon-detail` when present? Not included in the example dataset.
+
+### MeasurementOrFact
+SCD: Possible we'll want to use terms from this class....
