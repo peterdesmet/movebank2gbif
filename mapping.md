@@ -109,7 +109,7 @@ SCD: ?? Might use this to concatenate values from miscellaneous data and referen
 #### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 Recommended...
-SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
 
     275195086
 
@@ -139,20 +139,20 @@ n/a
 #### [sex](http://rs.tdwg.org/dwc/terms/index.htm#sex)
 
 Recommended...
-Stored in the reference data file as `animal-sex`, linked to records in the data file by matching the reference data `animal-id` with the data file `individual-local-identifier`. Always m, f, or blank.
+Stored in the reference data file as `animal-sex` (optional, often used), linked to records in the data file by matching the reference data `animal-id` with the data file `individual-local-identifier`. Always m, f, or blank.
 
     f
     
 #### [lifeStage](http://rs.tdwg.org/dwc/terms/index.htm#lifeStage)
 
 Recommended...
-Stored in the reference data file as `animal-life-stage`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
+Stored in the reference data file as `animal-life-stage` (optional, often used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
 
     adult (> 1 year)
 
 #### [reproductiveCondition](http://rs.tdwg.org/dwc/terms/index.htm#reproductiveCondition)
 
-Stored in the reference data file as `animal-reproductive-condition`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
+Stored in the reference data file as `animal-reproductive-condition` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
 
     breeding
 
@@ -185,7 +185,7 @@ n/a
 
 #### [associatedTaxa](http://rs.tdwg.org/dwc/terms/index.htm#associatedTaxa)
 
-Stored in the data file as `individual-taxon-canonical-name`.
+Stored in the data file as `individual-taxon-canonical-name` (this variable is always included).
 
     Falco naumanni
     
@@ -194,19 +194,18 @@ n/a
 
 #### [occurrenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceRemarks)
 
-Stored in the data file as `comments`. Not included in most datasets including the example.
+SCD: n/a? See eventRemarks.
 
 ### Organism
 
 #### [organismID](http://rs.tdwg.org/dwc/terms/index.htm#organismID)
-
 Recommended...
 n/a
 
 #### [organismName](http://rs.tdwg.org/dwc/terms/index.htm#organismName)
 
 Recommended...
-Stored in the data file as `individual-local-identifier`.
+Stored in the data file as `individual-local-identifier` (this variable is always included).
 
     B[5.H]
 
@@ -220,26 +219,26 @@ n/a
 n/a
 #### [organismRemarks](http://rs.tdwg.org/dwc/terms/index.htm#organismRemarks)
 
-Stored in the reference data file as `animal-comments`, linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Not included in the example dataset.
+Stored in the reference data file as `animal-comments` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Not included in the example dataset.
 
 ### MaterialSample
 n/a
-
 ### Event
 
 #### [eventID](http://rs.tdwg.org/dwc/terms/index.htm#eventID)
 
-The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id`. Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
 
     275195086
     
 #### [parentEventID](http://rs.tdwg.org/dwc/terms/index.htm#parentEventID)
+n/a?
 #### [fieldNumber](http://rs.tdwg.org/dwc/terms/index.htm#fieldNumber)
 n/a
 #### [eventDate](http://rs.tdwg.org/dwc/terms/index.htm#eventDate)
 
 Recommended...
-SCD: Stored in the data file as `timestamp`, always in UTC. Do we need to convert these values to make the time zone unambiguous or use a standard encoding scheme?
+SCD: Stored in the data file as `timestamp` (this variable is always included), always in format yyyy-MM-dd HH:mm:ss.SSS (UTC). Do we need to convert these values to make the time zone unambiguous or use a standard encoding scheme?
     
     2012-06-06 14:20:07.000
 
@@ -260,15 +259,27 @@ n/a
 SCD: Could use this instead of eventDate to avoid needing to convert?
 
 #### [habitat](http://rs.tdwg.org/dwc/terms/index.htm#habitat)
+
+Stored in the data file as `habitat` (optional, rarely used). Not used in the example dataset.
+    
 #### [samplingProtocol](http://rs.tdwg.org/dwc/terms/index.htm#samplingProtocol)
 
 Recommended...
+SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included).
+
+    gps
 
 #### [samplingEffort](http://rs.tdwg.org/dwc/terms/index.htm#samplingEffort)
+n/a
 #### [sampleSizeValue](http://rs.tdwg.org/dwc/terms/index.htm#sampleSizeValue)
+n/a
 #### [sampleSizeUnit](http://rs.tdwg.org/dwc/terms/index.htm#sampleSizeUnit)
+n/a
 #### [fieldNotes](http://rs.tdwg.org/dwc/terms/index.htm#fieldNotes)
+n/a
 #### [eventRemarks](http://rs.tdwg.org/dwc/terms/index.htm#eventRemarks)
+
+SCD: Better here than occurrenceRemarks? Stored in the data file as `comments` (optional, sometimes used). Not included in most datasets including the example.
 
 ### Location
 
