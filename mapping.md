@@ -98,9 +98,9 @@ SCD: Note there are 1-2 exceptions, in which the locations were noted by a human
 #### [informationWithheld](http://rs.tdwg.org/dwc/terms/index.htm#informationWithheld)
 
 Possibly...
-Assuming we will not map every variable from published datasets to DC, here we might refer to the resolvable DOI of the dataset, will be the same for all records in a dataset. Can be created by concatening `"http://doi.org/"` with `metadata.doi`:
+Assuming we will not map every variable from published datasets to DC, here we can refer to the DOI of the dataset, will be the same for all records in a dataset. Concatene `"see doi"` with `metadata.doi`:
 
-    http://doi.org/10.5441/001/1.sj8t3r11
+    see doi 10.5441/001/1.sj8t3r11
 
 #### [dataGeneralizations](http://rs.tdwg.org/dwc/terms/index.htm#dataGeneralizations)
 n/a
@@ -115,16 +115,14 @@ SCD: ?? Might use this to concatenate values from miscellaneous data and referen
 #### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 Recommended...
-SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same. Alternative might be to have this automatically created as a sequential unique number.
+SCD: I think this is better put under [eventID], or can/should it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same. Alternative might be to have this automatically created as a sequential unique number.
 
     275195086
 
 #### [catalogNumber](http://rs.tdwg.org/dwc/terms/index.htm#catalogNumber)
 n/a
-
 #### [recordNumber](http://rs.tdwg.org/dwc/terms/index.htm#recordNumber)
 n/a
-
 #### [recordedBy](http://rs.tdwg.org/dwc/terms/index.htm#recordedBy)
 n/a
 
@@ -136,7 +134,6 @@ Records always represent 1 animal so use the **static value**
     
 #### [organismQuantity](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantity)
 n/a
-
 #### [organismQuantityType](http://rs.tdwg.org/dwc/terms/index.htm#organismQuantityType)
 n/a
 
@@ -150,19 +147,19 @@ Stored in the reference data file as `animal-sex` (optional, often used), linked
 #### [lifeStage](http://rs.tdwg.org/dwc/terms/index.htm#lifeStage)
 
 Recommended...
-Stored in the reference data file as `animal-life-stage` (optional, often used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
+Stored in the reference data file as `animal-life-stage` (optional, often used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` and the same `tag-id` = `tag-local-identifier`. The value represents the age at the beginning of the deployment, so if there are multiple deployments there could be multiple life stage values for the same animal in the dataset.
 
     adult (> 1 year)
 
 #### [reproductiveCondition](http://rs.tdwg.org/dwc/terms/index.htm#reproductiveCondition)
 
-Stored in the reference data file as `animal-reproductive-condition` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
+Stored in the reference data file as `animal-reproductive-condition` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` and the same `tag-id` = `tag-local-identifier`. The value represents the condition at the beginning of the deployment, so if there are multiple deployments there could be multiple reproductive condition values for the same animal in the dataset.
 
     breeding
 
 #### [behavior](http://rs.tdwg.org/dwc/terms/index.htm#behavior)
 
-SCD: Behavior information can be stored in several non-required data file attributes, but few datasets include them, including the example. Attributes that could be stored here include `behavioural-classfication`, `migration-stage`, `migration-stage-standard`, possible others very rarely used.
+SCD: Behavior information can be stored in several non-required data file attributes, but few datasets include them, including the example. Attributes that could be stored here include `behavioural-classification`, `migration-stage`, `migration-stage-standard`, possible others very rarely used.
 
 #### [establishmentMeans](http://rs.tdwg.org/dwc/terms/index.htm#establishmentMeans)
 n/a
@@ -182,7 +179,9 @@ n/a
 
 #### [associatedReferences](http://rs.tdwg.org/dwc/terms/index.htm#associatedReferences)
 
-SCD: Is this covered by [references]?
+Here we could concatenate the DOIs stored in the metadata as `relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo"` and `relatedIdentifier relatedIdentifierType="DOI" relationType="IsDocumentedBy"`, separated by ` | `. `IsSupplementTo` is the DOI for the reference included in [references] and `IsDocumentedBy` (sometimes used) is the DOI/s for additional papers published using the same dataset.
+
+    10.1371/journal.pone.0145402
 
 #### [associatedSequences](http://rs.tdwg.org/dwc/terms/index.htm#associatedSequences)
 n/a
@@ -195,10 +194,8 @@ SCD: Stored in the data file as `individual-taxon-canonical-name` (this variable
     
 #### [otherCatalogNumbers](http://rs.tdwg.org/dwc/terms/index.htm#otherCatalogNumbers)
 n/a
-
 #### [occurrenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceRemarks)
-
-SCD: n/a? See eventRemarks.
+n/a
 
 ### Organism
 
@@ -221,22 +218,24 @@ n/a
 n/a
 #### [previousIdentifications](http://rs.tdwg.org/dwc/terms/index.htm#previousIdentifications)
 n/a
+
 #### [organismRemarks](http://rs.tdwg.org/dwc/terms/index.htm#organismRemarks)
 
-Stored in the reference data file as `animal-comments` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Not included in the example dataset.
+Stored in the reference data file as `animal-comments` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier`. Not included in the example dataset.
 
 ### MaterialSample
 n/a
+
 ### Event
 
 #### [eventID](http://rs.tdwg.org/dwc/terms/index.htm#eventID)
 
-The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same. Also see [occurrenceID].
 
     275195086
     
 #### [parentEventID](http://rs.tdwg.org/dwc/terms/index.htm#parentEventID)
-n/a?
+n/a
 #### [fieldNumber](http://rs.tdwg.org/dwc/terms/index.htm#fieldNumber)
 n/a
 #### [eventDate](http://rs.tdwg.org/dwc/terms/index.htm#eventDate)
@@ -260,7 +259,9 @@ n/a
 n/a
 #### [verbatimEventDate](http://rs.tdwg.org/dwc/terms/index.htm#verbatimEventDate)
 
-SCD: Could use this instead of eventDate to avoid needing to convert?
+SCD: Could use this instead of eventDate to avoid needing to convert? Stored in the data file as `timestamp` (this variable is always included), always in format yyyy-MM-dd HH:mm:ss.SSS (UTC).
+    
+    2012-06-06 14:20:07.000
 
 #### [habitat](http://rs.tdwg.org/dwc/terms/index.htm#habitat)
 
@@ -269,9 +270,9 @@ Stored in the data file as `habitat` (optional, rarely used). Not used in the ex
 #### [samplingProtocol](http://rs.tdwg.org/dwc/terms/index.htm#samplingProtocol)
 
 Recommended...
-SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Also see locationAccordingTo.
+SCD: Also see [locationAccordingTo]. Can store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Here or elsewhere we should at mimimum record the `tag-manufacturer-name` and possibly other methods information stored in the reference data file. A complete example could concatenate `sensor-type` + `": "` + `tag-manufacturer-name` + `" "` + `tag-model` + `"; tag readout method: "` `tag-readout-method`. The latter four reference data attributes can be linked to records in the data file by the same `animal-id`= `individual-local-identifier` and the same `tag-id` = `tag-local-identifier`. If there are multiple deployments there could tag information for the same animal in the dataset.
 
-    gps
+    gps: Technosmart GiPSy-2; tag readout method: tag-retrieval
 
 #### [samplingEffort](http://rs.tdwg.org/dwc/terms/index.htm#samplingEffort)
 n/a
@@ -283,7 +284,7 @@ n/a
 n/a
 #### [eventRemarks](http://rs.tdwg.org/dwc/terms/index.htm#eventRemarks)
 
-SCD: Better here than occurrenceRemarks? Stored in the data file as `comments` (optional, sometimes used). Not included in most datasets including the example.
+Stored in the data file as `comments` (optional, sometimes used). Not included in most datasets including the example. In some cases the readme file must be consulted for explanation.
 
 ### Location
 
@@ -322,7 +323,7 @@ n/a
 n/a
 #### [verbatimElevation](http://rs.tdwg.org/dwc/terms/index.htm#verbatimElevation)
 
-Stored in the data file as `height-above-ellipsoid` or `height-above-msl` (optional, sometimes used, both in m). Not used in the example dataset.
+SCD: Stored in the data file as `height-above-ellipsoid`, `height-above-msl`, or `height-raw` (optional, sometimes used, the first two are always in m, units are undefined for height-raw). Not used in the example dataset. Could also use the ElevationInMeters or DistanceAboveSurface terms, but this might be more straightforward.
 
 #### [minimumDepthInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDepthInMeters)
 n/a
@@ -331,31 +332,31 @@ n/a
 #### [verbatimDepth](http://rs.tdwg.org/dwc/terms/index.htm#verbatimDepth)
 n/a
 #### [minimumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#minimumDistanceAboveSurfaceInMeters)
-
 Recommended...
 n/a
-
 #### [maximumDistanceAboveSurfaceInMeters](http://rs.tdwg.org/dwc/terms/index.htm#maximumDistanceAboveSurfaceInMeters)
 n/a
+
 #### [locationAccordingTo](http://rs.tdwg.org/dwc/terms/index.htm#locationAccordingTo)
 
-SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Also see samplingProtocol.
+SCD: Could store the sensor type (i.e. tracking method) here, stored in the data file as `sensor-type` (this variable is always included). Also see [samplingProtocol].
 
     gps
     
 #### [locationRemarks](http://rs.tdwg.org/dwc/terms/index.htm#locationRemarks)
 n/a
+
 #### [decimalLatitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLatitude)
 
 Recommended...
-Stored in the data file as `location-lat` (technically optional, always used except for a few datasets in which only raw light level values measured by geolocators are archived).
+SCD: Stored in the data file as `location-lat`. This is technically optional and sometimes blank for individual data records where a fix was not obtained, and absent for a few datasets in which only raw light level values measured by geolocators are archived.
 
     37.391942
 
 #### [decimalLongitude](http://rs.tdwg.org/dwc/terms/index.htm#decimalLongitude)
 
 Recommended...
-Stored in the data file as `location-long` (technically optional, always used except for a few datasets in which only raw light level values measured by geolocators are archived).
+SCD: Stored in the data file as `location-long`. This is technically optional and sometimes blank for individual data records where a fix was not obtained, and absent for a few datasets in which only raw light level values measured by geolocators are archived.
 
     -6.557898
     
@@ -396,28 +397,23 @@ n/a
 #### [georeferencedDate](http://rs.tdwg.org/dwc/terms/index.htm#georeferencedDate)
 
 Possibly...
-SCD: See [eventDate]. Is that the right place for the timestamp associated with the location? Should the values be duplicated here?
+SCD: See [eventDate]. Should the values be duplicated here?
 
 #### [georeferenceProtocol](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceProtocol)
-
 Possibly...
 n/a
 
 #### [georeferenceSources](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceSources)
 
 Possibly...
-n/a
+SCD: n/a, see [locationAccordingTo] and [samplingProtocol]
 
 #### [georeferenceVerificationStatus](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceVerificationStatus)
-
 Possibly...
 n/a
-
 #### [georeferenceRemarks](http://rs.tdwg.org/dwc/terms/index.htm#georeferenceRemarks)
 n/a
-
 ### GeologicalContext
-
 n/a
 
 ### Taxon
@@ -462,7 +458,7 @@ n/a
 #### [kingdom](http://rs.tdwg.org/dwc/terms/index.htm#kingdom)
 
 Recommended...
-We should be safe to use the **static value**:
+It should be safe to use the **static value**
 
     Animalia
 
@@ -472,49 +468,33 @@ Possibly...
 SCD: Unless you know a fancy way to pull in the ITIS taxonomy by API we should skip these others. We have a published study of genus Bombus (Phylum Arthropoda) so can't statically enter anything more than Animalia.
 
 #### [class](http://rs.tdwg.org/dwc/terms/index.htm#class)
-
 Possibly...
 n/a
-
 #### [order](http://rs.tdwg.org/dwc/terms/index.htm#order)
-
 Possibly...
 n/a
-
 #### [family](http://rs.tdwg.org/dwc/terms/index.htm#family)
-
 Possibly...
 n/a
-
 #### [genus](http://rs.tdwg.org/dwc/terms/index.htm#genus)
-
 Possibly...
 n/a
-
 #### [subgenus](http://rs.tdwg.org/dwc/terms/index.htm#subgenus)
-
 Possibly...
 n/a
-
 #### [specificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#specificEpithet)
 n/a
 #### [infraspecificEpithet](http://rs.tdwg.org/dwc/terms/index.htm#infraspecificEpithet)
 n/a
 #### [taxonRank](http://rs.tdwg.org/dwc/terms/index.htm#taxonRank)
-
 Possibly...
 n/a
-
 #### [verbatimTaxonRank](http://rs.tdwg.org/dwc/terms/index.htm#verbatimTaxonRank)
 n/a
-
 #### [scientificNameAuthorship](http://rs.tdwg.org/dwc/terms/index.htm#scientificNameAuthorship)
-
 Possibly...
 n/a
-
 #### [vernacularName](http://rs.tdwg.org/dwc/terms/index.htm#vernacularName)
-
 Possibly...
 n/a
 
@@ -530,7 +510,9 @@ n/a
 #### [nomenclaturalStatus](http://rs.tdwg.org/dwc/terms/index.htm#nomenclaturalStatus)
 n/a
 #### [taxonRemarks](http://rs.tdwg.org/dwc/terms/index.htm#taxonRemarks)
-SCD: We allow owners to store taxonomic information not valid in ITIS in the reference data file as `animal-taxon-detail` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier` + `tag-id` = `tag-local-identifier`. Could concatonate `taxonomic detail not valid in ITIS: ` + value in `animal-taxon-detail` when present? Not included in the example dataset.
+
+SCD: We allow owners to store taxonomic information not valid in ITIS in the reference data file as `animal-taxon-detail` (optional, sometimes used), linked to records in the data file by the same `animal-id`= `individual-local-identifier`. Could concatonate `taxonomic detail not valid in ITIS: ` + value in `animal-taxon-detail` when present. Not included in the example dataset.
 
 ### MeasurementOrFact
+
 SCD: Possible we'll want to use terms from this class....
