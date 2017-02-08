@@ -32,30 +32,33 @@ All data in the Movebank Data Repository are published under CC0. That informati
 #### [rightsHolder](http://rs.tdwg.org/dwc/terms/index.htm#rightsHolder)
 
 Recommended...
-SCD: Options I see here could be to use (1) the publisher (static: `University of Konstanz`) or (2) the first author, as found as the first creatorName in the in the DataCite metadata, or else (3) skip this one. The "A person or organization owning or managing rights over the resource", if we read it to be the current "owner" of the original data, to the degree relevant for data published in the public domain, is not explicitly recorded anywhere in the dataset. In some cases the first author would cease to be the "owner" if, say, they left the organization through which the data were collected.
+SCD: The definition is "A person or organization owning or managing rights over the resource". If we consider that these are public domain data and think of the analogy of a museum that has specimens originally collected by different groups or individuals, and the museum is the RightsHolder, then here we should use the use the **static value** `University of Konstanz`. If it should rather represent who/what should be cited for the use of the data, the other option would be to concatenate author names as stored in `creator`. Or we could skip. We don't collect information about the institutional "owner" for datasets (often there would be multiple affiliations that might or might not change with authors change jobs, so it would get complicated).
 
 #### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
-SCD: Is this value too long? It is the "Terms of Use" included in the readme file of every published data file. I could shorten this to 1 phrase instead. **static value**:
+SCD: Use **static value**, either the "Terms of Use" included in the readme file of every published data file (first example below) or the second, shorter, example.
 
     This data file is licensed by the Creative Commons Zero (CC0 1.0) license. The intent of this license is to facilitate the re-use of works. The Creative Commons Zero license is a "no rights reserved" license that allows copyright holders to opt out of copyright protections automatically extended by copyright and other laws, thus placing works in the public domain with as little legal restriction as possible. However, works published with this license must still be appropriately cited following professional and ethical standards for academic citation. We highly recommend that you contact the data creator if possible if you will be re-using or re-analyzing data in this file. Researchers will likely be interested in learning about new uses of their data, might also have important insights about how to properly analyze and interpret their data, and/or might have additional data they would be willing to contribute to your project. Feel free to contact us at support@movebank.org if you need assistance contacting data owners.
+    
+    CC0 1.0 license. Cite use and contact data creator as possible for input if data will be reanalyzed.
 
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
-Possibly...SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format `metadata.creator/creatorName` (`metadata.publicationYear`) Data from: `metadata.title/titles` [but ignore/remove "Data from: "]. Movebank Data Repository. doi:`metadata.identifier`
+Possibly...
+SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format `metadata.creator/creatorName` (`metadata.publicationYear`) Data from: `metadata.title/titles` [but ignore/remove "Data from: "]. Movebank Data Repository. doi:`metadata.identifier`
 It should be possible to find script to do this somewhere in our or Dryad's implementation of DataCite.
 
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Data from: Why do kestrels soar? Movebank Data Repository. doi:10.5441/001/1.sj8t3r11
     
 #### [references](http://rs.tdwg.org/dwc/terms/index.htm#references)
 
-SCD: We could (1) take the value from `metadata.description descriptionType="Other"` in the DataCite metadata (this is always the full citation for the primary paper associated with the dataset) or (2) take the value/s from `metadata.relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo"` (these are the DOIs only for papers associated with the dataset—always 1 that corresponds with the full citation in (1) and can also include DOIs for additional papers that use the dataset. (1) is probably the best option.
+Use the value from `metadata.description descriptionType="Other"` in the DataCite metadata (this is always the full citation for the primary paper associated with the dataset).
     
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Why do kestrels soar? PLOS ONE. 10(12): e0145402. doi:10.1371/journal.pone.0145402
 
 #### [institutionID](http://rs.tdwg.org/dwc/terms/index.htm#institutionID)
 
-SCD: Suggest we skip. See notes about [rightsHolder].
+SCD: Suggest we skip. See notes under [rightsHolder]. We don't collect information about the institutional "owner" for datasets, so the only option would be to use the **static value** `University of Konstanz`.
 
 #### [collectionID](http://rs.tdwg.org/dwc/terms/index.htm#collectionID)
 n/a
@@ -69,7 +72,7 @@ Resolvable DOI of the dataset, will be the same for all records in a dataset. Ca
 #### [institutionCode](http://rs.tdwg.org/dwc/terms/index.htm#institutionCode)
 
 Recommended...
-SCD: Suggest we skip for now. See notes about [rightsHolder]. This term has the same definition as the same as ownerInstitutionCode?
+SCD: Suggest we skip or use the **static value** `University of Konstanz`. See notes under [rightsHolder].
 
 #### [collectionCode](http://rs.tdwg.org/dwc/terms/index.htm#collectionCode)
 n/a
@@ -83,7 +86,7 @@ Title of the dataset, will be the same for all records in a dataset. Can be retr
 #### [ownerInstitutionCode](http://rs.tdwg.org/dwc/terms/index.htm#ownerInstitutionCode)
 
 Recommended...
-SCD: Suggest we skip for now. See notes about [rightsHolder]. This term has the same definition as the same as InstitutionCode?
+SCD: Suggest we skip or use the **static value** `University of Konstanz`. See notes about [rightsHolder].
 
 #### [basisOfRecord](http://rs.tdwg.org/dwc/terms/index.htm#basisOfRecord)
 
@@ -95,6 +98,9 @@ SCD: Note there are 1-2 exceptions, in which the locations were noted by a human
 #### [informationWithheld](http://rs.tdwg.org/dwc/terms/index.htm#informationWithheld)
 
 Possibly...
+Assuming we will not map every variable from published datasets to DC, here we might refer to the resolvable DOI of the dataset, will be the same for all records in a dataset. Can be created by concatening `"http://doi.org/"` with `metadata.doi`:
+
+    http://doi.org/10.5441/001/1.sj8t3r11
 
 #### [dataGeneralizations](http://rs.tdwg.org/dwc/terms/index.htm#dataGeneralizations)
 n/a
@@ -109,14 +115,12 @@ SCD: ?? Might use this to concatenate values from miscellaneous data and referen
 #### [occurrenceID](http://rs.tdwg.org/dwc/terms/index.htm#occurrenceID)
 
 Recommended...
-SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same, so if this is a problem we can skip this one.
+SCD: I think this is better put under Event > eventID? Or can it go both places? The event-id is a unique ID for each dataset-record and can be retrieved from the data file `event-id` (this variable is always included). Note that when the same record is published in multiple datasets, the event-id will not be the same. Alternative might be to have this automatically created as a sequential unique number.
 
     275195086
 
 #### [catalogNumber](http://rs.tdwg.org/dwc/terms/index.htm#catalogNumber)
-
 n/a
-SCD: Could use this instead of occurrenceID as described above.
 
 #### [recordNumber](http://rs.tdwg.org/dwc/terms/index.htm#recordNumber)
 n/a
