@@ -45,8 +45,7 @@ SCD: Use **static value**, either the "Terms of Use" included in the readme file
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
 
 Possibly...
-SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format `metadata.creator/creatorName` (`metadata.publicationYear`) Data from: `metadata.title/titles` [but ignore/remove "Data from: "]. Movebank Data Repository. doi:`metadata.identifier`
-It should be possible to find script to do this somewhere in our or Dryad's implementation of DataCite.
+SCD: Would be nice to include this if possible. The citation for the data package can be built from the DataCite metadata using the general format `metadata.creator/creatorName`[, repeat as needed for multiple creators] (`metadata.publicationYear`) `metadata.title`. Movebank Data Repository. doi:`metadata.identifier`
 
     Hernandez-Pliego J, Rodriguez C, Bustamante J (2015) Data from: Why do kestrels soar? Movebank Data Repository. doi:10.5441/001/1.sj8t3r11
     
