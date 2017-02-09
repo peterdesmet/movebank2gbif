@@ -15,7 +15,9 @@ Each record is an event, so use the **static value**:
 #### [modified](http://rs.tdwg.org/dwc/terms/index.htm#modified)
 
 Possibly...
-SCD: Here would we use the publication date for the dataset?
+Here could retrieve date of last metadata update from `metadata.updated`. I think the format should be acceptable as is.
+
+    2015-12-24T18:33:53Z
 
 #### [language](http://rs.tdwg.org/dwc/terms/index.htm#language)
 
@@ -36,10 +38,8 @@ SCD: The definition is "A person or organization owning or managing rights over 
 
 #### [accessRights](http://rs.tdwg.org/dwc/terms/index.htm#accessRights)
 
-SCD: Use **static value**, either the "Terms of Use" included in the readme file of every published data file (first example below) or the second, shorter, example.
+SCD: Use **static value**:
 
-    This data file is licensed by the Creative Commons Zero (CC0 1.0) license. The intent of this license is to facilitate the re-use of works. The Creative Commons Zero license is a "no rights reserved" license that allows copyright holders to opt out of copyright protections automatically extended by copyright and other laws, thus placing works in the public domain with as little legal restriction as possible. However, works published with this license must still be appropriately cited following professional and ethical standards for academic citation. We highly recommend that you contact the data creator if possible if you will be re-using or re-analyzing data in this file. Researchers will likely be interested in learning about new uses of their data, might also have important insights about how to properly analyze and interpret their data, and/or might have additional data they would be willing to contribute to your project. Feel free to contact us at support@movebank.org if you need assistance contacting data owners.
-    
     CC0 1.0 license. Cite use and contact data creator as possible for input if data will be reanalyzed.
 
 #### [bibliographicCitation](http://rs.tdwg.org/dwc/terms/index.htm#bibliographicCitation)
