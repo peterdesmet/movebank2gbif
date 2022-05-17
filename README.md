@@ -4,7 +4,7 @@ A proof of concept to make public Movebank data available on GBIF.
 
 ## Note
 
-This repository is now archived. Many of the ideas decribed in this repository and issues were implemented as part of the NLBIF-funded project [**MOVE2GBIF**](https://www.inbo.be/inbo/en-GB/projects/move2gbif-mobilizing-animal-gps-tracking-data-to-movebank-and-gbif-evinbo) in 2021-2022. The project did not aim to publish _all_ available Movebank datasets to GBIF, but rather provide **guidelines and tools** to do so (see the R package [movepub](https://github.com/inbo/movepub)) and to test this on a number of INBO and Sovon datasets.
+This repository is now archived. Many of the ideas decribed in this repository and issues were implemented as part of the NLBIF-funded project [**MOVE2GBIF**](https://www.inbo.be/inbo/en-GB/projects/move2gbif-mobilizing-animal-gps-tracking-data-to-movebank-and-gbif-evinbo) in 2021-2022. The aim of that project was not to publish _all_ available Movebank datasets to GBIF, but rather to provide **guidelines and tools** to do so (see R package [movepub](https://github.com/inbo/movepub)) and to test this on a number of [INBO and Sovon datasets](https://github.com/inbo/bird-tracking).
 
 ## Rationale
 
